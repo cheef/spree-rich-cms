@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    attributes:
+      spree/page:
+        name: Name
+        url: Url
+        body: Body
+        meta_title: Meta Title
+        meta_description: Meta Description
+        meta_keywords: Meta Keywords
+        position: Position
+        published_at: Published At
+  spree:
+    pages: Pages
