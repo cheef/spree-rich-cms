@@ -1,8 +1,8 @@
 class CreatePages < ActiveRecord::Migration
   def change
-    create_table :pages do |t|
+    create_table :spree_pages do |t|
       t.string :name
-      t.string :url
+      t.string :slug
       t.text :body
       t.string :meta_title
       t.string :meta_description

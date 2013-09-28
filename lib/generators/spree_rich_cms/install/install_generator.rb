@@ -5,9 +5,7 @@ module SpreeRichCMS
 
       def add_migrations
         say_status :copying, "migrations"
-        #quietly { rake 'railties:install:migrations FROM=spree-rich-cms' }
-        #rake 'railties:install:migrations FROM=spree-rich-cms'
-        run 'rake railties:install:migrations FROM=spree-rich-cms'
+        quietly { run 'rake railties:install:migrations FROM=spree_rich_cms' }
       end
 
       def run_migrations

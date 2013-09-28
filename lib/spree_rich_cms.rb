@@ -1,3 +1,7 @@
+require 'friendly_id'
+require 'spree_rich_cms/engine'
+
 module SpreeRichCMS
-  autoload :VERSION, 'spree_rich_cms/version'
+  autoload :Engine, 'spree_rich_cms/engine'
+  autoload :PageConstraint, 'spree_rich_cms/page_constraint'
 end
