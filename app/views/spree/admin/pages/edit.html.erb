@@ -1,0 +1,16 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:edit_page) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t(:back_to_pages), spree.admin_pages_path, icon: 'icon-arrow-left' %>
+  </li>
+<% end %>
+
+<%= form_for [:admin, @page], url: admin_page_path(@page.id) do |f| %>
+  <fieldset class="no-border-top">
+    <%= render partial: 'form', locals: { f: f } %>
+    <%= render partial: 'spree/admin/shared/edit_resource_links' %>
+  </fieldset>
+<% end %>

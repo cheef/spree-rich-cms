@@ -1,0 +1,19 @@
+<div data-hook="admin_page_form_fields">
+  <%= f.field_container :name do %>
+    <%= f.label :name, raw(I18n.t(:name, scope: 'activerecord.attributes.spree/page') + content_tag(:span, ' *', class: 'required')) %>
+    <%= f.text_field :name, class: 'fullwidth title' %>
+    <%= f.error_message_on :name %>
+  <% end %>
+
+  <%= f.field_container :slug do %>
+    <%= f.label :slug, raw(I18n.t(:slug, scope: 'activerecord.attributes.spree/page') + content_tag(:span, ' *', class: 'required')) %>
+    <%= f.text_field :slug, class: 'fullwidth title' %>
+    <%= f.error_message_on :slug %>
+  <% end if f.object %>
+
+  <%= f.field_container :body do %>
+    <%= f.label :body, I18n.t(:body, scope: 'activerecord.attributes.spree/page') %>
+    <%= f.text_area :body, class: 'fullwidth title' %>
+    <%= f.error_message_on :body %>
+  <% end %>
+ </div>

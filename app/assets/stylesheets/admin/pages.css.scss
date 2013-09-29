@@ -1,0 +1,28 @@
+@import 'admin/globals/variables_override';
+@import 'admin/globals/variables';
+
+.admin {
+  .pages {
+    .page {
+      list-style-type: none;
+      .page-slug {
+        line-height: $h1-size + 2;
+        i {
+          vertical-align: middle;
+          margin-left: 5px;
+        }
+      }
+
+      .page-title {
+        i {
+          vertical-align: middle;
+          margin-left: 5px;
+          visibility: hidden;
+        }
+        &:hover i {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+<% if can? :manage, Spree::Page %>
+  <%= tab :pages, url: spree.admin_pages_path, icon: 'icon-pencil' %>
+<% end %>

@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    attributes:
+      spree/page:
+        name: Заголовок
+        slug: URL-адрес
+        body: Содержимое
+
+    models:
+      spree/page:
+        one: Страница
+        other: Страницы
+
+  spree:
+    pages: Страницы
+    new_page: Новая страница
+    edit_page: Редактирование страницы
+    back_to_pages: Вернуться к страницам
+    admin:
+      tab:
+        pages: Страницы
