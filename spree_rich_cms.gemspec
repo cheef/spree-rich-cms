@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'spree', '>= 2'
   spec.add_runtime_dependency 'friendly_id', '>= 5.0.0.rc1'
+  spec.add_runtime_dependency 'carrierwave'
+  spec.add_runtime_dependency 'mini_magick'
 
   spec.add_development_dependency "rake"
 end
