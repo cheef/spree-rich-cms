@@ -13,7 +13,7 @@
 
   <%= f.field_container :body do %>
     <%= f.label :body, I18n.t(:body, scope: 'activerecord.attributes.spree/page') %>
-    <%= f.text_area :body, class: 'fullwidth title' %>
+    <%= f.cktext_area :body %>
     <%= f.error_message_on :body %>
   <% end %>
  </div>

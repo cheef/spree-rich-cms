@@ -1,4 +1,3 @@
-require 'friendly_id'
 require 'spree_rich_cms/engine'
 
 module SpreeRichCMS

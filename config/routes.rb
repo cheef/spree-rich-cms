@@ -4,4 +4,6 @@ Spree::Core::Engine.routes.draw do
   namespace :admin do
     resources :pages
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
 end
