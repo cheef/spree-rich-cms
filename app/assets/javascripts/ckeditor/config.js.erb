@@ -1,7 +1,4 @@
-/*
- Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.html or http://ckeditor.com/license
- */
+//= require ckeditor/overrides
 
 CKEDITOR.editorConfig = function( config ) {
   // Define changes to default configuration here. For example:
@@ -90,4 +87,10 @@ CKEDITOR.editorConfig = function( config ) {
       }
     }
   });
+
+  if (CKEDITOR_CONFIG_HOOKS != undefined && CKEDITOR_CONFIG_HOOKS) {
+    for ( var i in CKEDITOR_CONFIG_HOOKS ) {
+      CKEDITOR_CONFIG_HOOKS[i].call(this, config)
+    }
+  };
 };

@@ -1,0 +1,12 @@
+// Remove some Spree styles
+.cke_dialog {
+  table tbody tr {
+    th, td {
+      border: none;
+      background: #fff;
+      &:hover {
+        background: #fff;
+      }
+    }
+  }
+}
