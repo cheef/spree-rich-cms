@@ -7,6 +7,10 @@ module SpreeRichCMS
     isolate_namespace Spree
     engine_name 'spree_rich_cms'
 
+    initializer 'assets.precompile' do |config|
+      Rails.application.config.assets.precompile += ["ckeditor*"]
+    end
+
     config.to_prepare do
       Dir.glob(Rails.root.join "app/decorators/**/*_decorator*.rb").each do |lib|
         require_dependency lib

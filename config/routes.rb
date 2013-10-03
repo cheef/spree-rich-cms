@@ -5,5 +5,5 @@ Spree::Core::Engine.routes.draw do
     resources :pages
   end
 
-  mount Ckeditor::Engine => '/ckeditor'
+  mount Ckeditor::Engine => '/admin/ckeditor'
 end
