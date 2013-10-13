@@ -5,6 +5,9 @@ en:
         name: Title
         slug: Slug
         body: Body
+        meta_title: Meta Title
+        meta_description: Meta Description
+        meta_keywords: Meta Keywords
 
     models:
       spree/page:
@@ -15,7 +18,8 @@ en:
     pages: Pages
     new_page: New Page
     edit_page: Edit Page
-    back_to_pages: Вернуться к страницам
+    back_to_pages: Back to pages
     admin:
       tab:
         pages: Pages
+    page_name_info: page slug will be automatically generated for this title
