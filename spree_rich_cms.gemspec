@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "spree_rich_cms"
-  spec.version       = '0.0.10'
+  spec.version       = '0.0.11'
   spec.authors       = ["Ivan Garmatenko"]
   spec.email         = ["cheef.che@gmail.com"]
   spec.description   = %(Simple CMS with rich text editor integrated with Spree)

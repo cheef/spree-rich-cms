@@ -8,7 +8,7 @@
   </li>
 <% end %>
 
-<%= form_for [:admin, @page], url: admin_page_path(@page.id) do |f| %>
+<%= form_for [:admin, @page], url: admin_page_path(@page.id), class: 'page-form' do |f| %>
   <fieldset class="no-border-top">
     <%= render partial: 'form', locals: { f: f } %>
     <%= render partial: 'spree/admin/shared/edit_resource_links' %>

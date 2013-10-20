@@ -1,0 +1,8 @@
+#= require_self
+#= require ckeditor/ckeditor
+
+window.CKEDITOR_BASEPATH ||= "<%= Rails.application.config.assets.prefix %>/ckeditor/"
+
+->
+  $('.ckeditor').each (i, element) ->
+    CKEDITOR.replace element
