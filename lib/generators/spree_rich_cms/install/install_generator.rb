@@ -2,6 +2,7 @@ module SpreeRichCMS
   module Generators
     class InstallGenerator < Rails::Generators::Base
       namespace 'spree_rich_cms:install'
+      source_root File.expand_path('../templates', __FILE__)
 
       def add_javascripts
         append_file "app/assets/javascripts/admin/all.js", "//= require admin/spree_rich_cms"
@@ -9,8 +10,12 @@ module SpreeRichCMS
 
       def add_stylesheets
         inject_into_file "app/assets/stylesheets/admin/all.css", " *= require admin/spree_rich_cms\n",
-                         before:  /\*\//,
-                         verbose: true
+          before:  /\*\//,
+          verbose: true
+      end
+
+      def add_initializer
+        template 'config/initializers/spree_rich_cms.rb', 'config/initializers/spree_rich_cms.rb'
       end
 
       def add_migrations

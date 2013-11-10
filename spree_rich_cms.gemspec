@@ -2,26 +2,32 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Gem::Specification.new do |spec|
-  spec.name          = "spree_rich_cms"
-  spec.version       = '0.0.12'
-  spec.authors       = ["Ivan Garmatenko"]
-  spec.email         = ["cheef.che@gmail.com"]
-  spec.description   = %(Simple CMS with rich text editor integrated with Spree)
-  spec.summary       = %(Simple CMS with rich text editor integrated with Spree)
-  spec.homepage      = ""
-  spec.license       = "MIT"
+Gem::Specification.new do |s|
+  s.name          = "spree_rich_cms"
+  s.version       = '0.0.13'
+  s.authors       = ["Ivan Garmatenko"]
+  s.email         = %w(cheef.che@gmail.com)
+  s.description   = %(Simple CMS with rich text editor integrated with Spree)
+  s.summary       = %(Simple CMS with rich text editor integrated with Spree)
+  s.homepage      = ""
+  s.license       = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  s.files         = Dir.glob("{app,config,db,lib}/**/*") + %w(README.md LICENSE.txt)
+  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.require_paths = %w(lib)
 
-  spec.add_runtime_dependency 'spree', '>= 2'
-  spec.add_runtime_dependency 'friendly_id', '>= 5.0.0.rc1'
-  spec.add_runtime_dependency 'carrierwave'
-  spec.add_runtime_dependency 'mini_magick'
-  spec.add_runtime_dependency 'ckeditor'
+  s.add_runtime_dependency 'spree', '>= 2'
+  s.add_runtime_dependency 'friendly_id', '>= 5.0.1'
+  s.add_runtime_dependency 'carrierwave'
+  s.add_runtime_dependency 'mini_magick'
+  s.add_runtime_dependency 'ckeditor'
 
-  spec.add_development_dependency "rake"
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'factory_girl', '>= 4.3'
+  s.add_development_dependency 'faker'
+  s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'bundler'
 end

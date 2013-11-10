@@ -1,4 +1,4 @@
-# Spree::Rich::Cms
+# Spree::Rich::CMS [![Build Status](https://secure.travis-ci.org/cheef/spree-rich-cms.png "Build Status")](http://travis-ci.org/cheef/spree-rich-cms) [![Coverage Status](https://coveralls.io/repos/cheef/spree-rich-cms/badge.png)](https://coveralls.io/r/cheef/spree-rich-cms)
 
 TODO: Write a gem description
 

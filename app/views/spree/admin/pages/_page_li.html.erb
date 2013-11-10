@@ -1,7 +1,7 @@
 <li class="page">
   <div class="alpha five columns page-slug">
     <%= link_to spree_page_path(page), target: '_blank' do %>
-      <%= '/' + page.slug %><i class="icon-external-link"></i>
+      <%= spree_page_path(page) %><i class="icon-external-link"></i>
     <% end %>
   </div>
   <h3 class="seven columns page-title">

@@ -1,6 +1,7 @@
 require 'friendly_id'
 require 'carrierwave'
 require 'ckeditor'
+require 'spree'
 
 module SpreeRichCMS
   class Engine < Rails::Engine

@@ -3,4 +3,5 @@ class Spree::Page < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   validates :name, presence: true
+  delegate :to_s, to: :name
 end
