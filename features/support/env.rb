@@ -6,6 +6,7 @@ require 'database_cleaner'
 require 'capybara/cucumber'
 require 'spree/testing_support/factories'
 require 'cucumber/rspec/doubles'
+require 'ffaker'
 
 FactoryGirl.find_definitions
 World(FactoryGirl::Syntax::Methods)
