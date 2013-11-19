@@ -2,10 +2,9 @@ ru:
   activerecord:
     attributes:
       spree/page:
-        name: Заголовок
+        title: Заголовок
         slug: URL-адрес
         body: Содержимое
-        meta_title: SEO-заголовок
         meta_description: SEO-описание
         meta_keywords: SEO ключевые слова
 

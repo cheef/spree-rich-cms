@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110100244) do
+ActiveRecord::Schema.define(version: 20131117174812) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -252,10 +252,9 @@ ActiveRecord::Schema.define(version: 20131110100244) do
   add_index "spree_orders", ["user_id"], name: "index_spree_orders_on_user_id"
 
   create_table "spree_pages", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "slug"
     t.text     "body"
-    t.string   "meta_title"
     t.string   "meta_description"
     t.string   "meta_keywords"
     t.integer  "position"

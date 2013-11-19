@@ -1,7 +1,7 @@
 <div data-hook="admin_page_form_fields">
   <%= f.field_container :name do %>
-    <%= f.label :name, raw(I18n.t(:name, scope: 'activerecord.attributes.spree/page') + content_tag(:span, ' *', class: 'required')) %>
-    <%= f.text_field :name, class: 'fullwidth' %>
+    <%= f.label :title, raw(I18n.t(:title, scope: 'activerecord.attributes.spree/page') + content_tag(:span, ' *', class: 'required')) %>
+    <%= f.text_field :title, class: 'fullwidth' %>
     <% unless f.object %>
       <span class="info"><%= Spree.t 'page_name_info' %></span>
     <% end %>
@@ -13,12 +13,6 @@
     <%= f.text_field :slug, class: 'fullwidth' %>
     <%= f.error_message_on :slug %>
   <% end if f.object %>
-
-  <%= f.field_container :meta_title do %>
-    <%= f.label :meta_title, I18n.t(:meta_title, scope: 'activerecord.attributes.spree/page') %>
-    <%= f.text_field :meta_title, class: 'fullwidth' %>
-    <%= f.error_message_on :meta_title %>
-  <% end %>
 
   <%= f.field_container :meta_description do %>
     <%= f.label :meta_description, I18n.t(:meta_description, scope: 'activerecord.attributes.spree/page') %>

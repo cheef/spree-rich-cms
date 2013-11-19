@@ -2,10 +2,9 @@ en:
   activerecord:
     attributes:
       spree/page:
-        name: Title
+        title: Title
         slug: Slug
         body: Body
-        meta_title: Meta Title
         meta_description: Meta Description
         meta_keywords: Meta Keywords
 
