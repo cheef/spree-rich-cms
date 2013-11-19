@@ -7,6 +7,9 @@ Spree::Core::Engine.routes.draw do
 
   namespace :admin do
     resources :pages, except: [ :delete ]
-    mount Ckeditor::Engine => 'ckeditor'
   end
+
+  # Can't mount in namespace because of rails issue
+  # https://github.com/drogus/rails/commit/03d21e7169a2aa11d4cab54b5332ccebae940dd7
+  mount Ckeditor::Engine => 'admin/ckeditor'
 end

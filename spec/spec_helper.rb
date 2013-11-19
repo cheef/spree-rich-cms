@@ -3,6 +3,7 @@ Coveralls.wear!
 
 require File.expand_path("../support/dummy/config/environment", __FILE__)
 require 'database_cleaner'
+require 'factory_girl'
 
 DatabaseCleaner.strategy = :truncation
 FactoryGirl.find_definitions
