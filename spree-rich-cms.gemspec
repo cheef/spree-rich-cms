@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name          = "spree-rich-cms"
-  s.version       = '0.0.15'
+  s.version       = '0.0.16'
   s.authors       = ["Ivan Garmatenko"]
   s.email         = %w(cheef.che@gmail.com)
   s.description   = %(Simple CMS with rich text editor integrated with Spree)
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'cucumber'
   s.add_development_dependency 'capybara'
+  s.add_development_dependency 'capybara-webkit'
   s.add_development_dependency 'launchy'
   s.add_development_dependency 'pickle'
   s.add_development_dependency 'sqlite3'

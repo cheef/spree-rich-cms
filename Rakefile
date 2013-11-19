@@ -1,9 +1,11 @@
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 require 'cucumber/rake/task'
+require 'coveralls/rake/task'
 
 RSpec::Core::RakeTask.new(:spec)
 Cucumber::Rake::Task.new(:features)
+Coveralls::RakeTask.new
 
 desc "Prepare dummy application"
 task :prepare do
@@ -14,4 +16,4 @@ task :prepare do
 end
 
 desc "Run all specs and features"
-task :test => [:prepare, :spec, :features]
+task :test => [:prepare, :spec, :features, 'coveralls:push']

@@ -1,7 +1,7 @@
 <div data-hook="admin_page_form_fields">
   <%= f.field_container :name do %>
     <%= f.label :title, raw(I18n.t(:title, scope: 'activerecord.attributes.spree/page') + content_tag(:span, ' *', class: 'required')) %>
-    <%= f.text_field :title, class: 'fullwidth' %>
+    <%= f.text_field :title, class: 'fullwidth page-title-input' %>
     <% unless f.object %>
       <span class="info"><%= Spree.t 'page_name_info' %></span>
     <% end %>

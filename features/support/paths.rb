@@ -11,6 +11,9 @@ module NavigationHelpers
     when /^the admin pages$/
       '/admin/pages'
 
+    when /^the new admin page$/
+      '/admin/pages/new'
+
     # the following are examples using path_to_pickle
 
     when /^#{capture_model}(?:'s)? page$/                           # eg. the forum's page

@@ -14,11 +14,14 @@ en:
         other: Pages
 
   spree:
-    pages: Pages
-    new_page: New Page
-    edit_page: Edit Page
-    back_to_pages: Back to pages
     admin:
       tab:
         pages: Pages
+    back_to_pages: Back to pages
+    edit_page: Edit Page
+    new_page: New Page
+    pages: Pages
+    page_editing: Edit Page
     page_name_info: page slug will be automatically generated for this title
+    remove_page: Remove page
+    removing_page_confirmation: Are you sure you want to delete this page?

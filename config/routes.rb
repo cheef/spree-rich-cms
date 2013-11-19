@@ -6,7 +6,7 @@ Spree::Core::Engine.routes.draw do
   end
 
   namespace :admin do
-    resources :pages, except: [ :delete ]
+    resources :pages
   end
 
   # Can't mount in namespace because of rails issue

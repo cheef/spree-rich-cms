@@ -19,6 +19,16 @@
           margin-left: 5px;
           visibility: hidden;
         }
+
+        i.icon-remove {
+          vertical-align: top;
+          color: $color-link;
+
+          &:hover {
+            color: $color-link-hover;
+          }
+        }
+
         &:hover i {
           visibility: visible;
         }

@@ -5,8 +5,12 @@
     <% end %>
   </div>
   <h3 class="seven columns page-title">
-    <%= link_to edit_admin_page_path(page.id) do%>
+    <%= link_to edit_admin_page_path(page.id), title: Spree.t('edit_page') do %>
       <%= page.title %><i class="icon-edit"></i>
+    <% end %>
+
+    <%= link_to admin_page_path(page.id), method: :delete, title: Spree.t('remove_page'), class: 'remove-page-link', data: { confirm: Spree.t('removing_page_confirmation') } do %>
+      <i class="icon-remove"></i>
     <% end %>
   </h3>
 </li>
