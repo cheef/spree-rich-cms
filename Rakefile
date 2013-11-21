@@ -9,10 +9,13 @@ Coveralls::RakeTask.new
 
 desc "Prepare dummy application"
 task :prepare do
+  ENV["RAILS_ENV"] = "test"
+
   require File.expand_path("./spec/support/dummy/config/environment", File.dirname(__FILE__))
   Dummy::Application.load_tasks
 
-  Rake::Task["db:test:prepare"].invoke
+  Rake::Task["db:create"].invoke
+  Rake::Task["db:test:load"].invoke
 end
 
 desc "Run all specs and features"
