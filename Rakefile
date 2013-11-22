@@ -18,4 +18,4 @@ task :prepare do
 end
 
 desc "Run all specs and features"
-task :test => [:prepare, :spec, :features, 'coveralls:push']
+task :default => [:prepare, :spec, :features, 'coveralls:push']
