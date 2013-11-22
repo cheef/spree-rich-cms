@@ -2,7 +2,7 @@ require 'coveralls'
 Coveralls.wear_merged!
 require 'simplecov'
 
-require File.expand_path("../support/dummy/config/environment", __FILE__)
+require File.expand_path("../dummy/config/environment", __FILE__)
 require 'database_cleaner'
 require 'factory_girl'
 require 'ffaker'

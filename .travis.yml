@@ -1,4 +1,6 @@
 language: ruby
+before_script:
+  - psql -c 'create database dummy_test;' -U postgres
 script: "rake test"
 rvm:
   - 2.0.0

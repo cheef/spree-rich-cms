@@ -3,11 +3,6 @@ login: &login
   encoding: utf8
   pool: 5
   username: postgres
-  password:
-
-development:
-  <<: *login
-  database: dummy_development
 
 test:
   <<: *login
