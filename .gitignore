@@ -18,3 +18,5 @@ tmp
 .idea
 .DS_Store
 coverage
+spec/support/dummy/log
+spec/support/dummy/public/spree
