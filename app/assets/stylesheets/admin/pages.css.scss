@@ -1,28 +1,55 @@
 @import 'admin/globals/variables_override';
 @import 'admin/globals/variables';
 
+$page-row-heigth: $h1-size + 2 !default;
+
 .admin {
   .pages {
     .page {
       list-style-type: none;
-      .page-slug {
-        line-height: $h1-size + 2;
+      .l-page-slug {
+        line-height: $page-row-heigth;
+
+        .b-page-slug {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
         i {
           vertical-align: middle;
-          margin-left: 5px;
+          float: right;
+          line-height: $page-row-heigth;
+          padding-top: 2px; // Visual fix
         }
       }
 
-      .page-title {
+      .l-page-title {
         i {
           vertical-align: middle;
           margin-left: 5px;
           visibility: hidden;
         }
 
+        .b-page-title {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        i.icon-edit {
+          float: right;
+          line-height: $page-row-heigth;
+          padding-top: 2px; // Visual fix
+        }
+
         i.icon-remove {
-          vertical-align: top;
           color: $color-link;
+          float: right;
+          line-height: $page-row-heigth;
+          padding-top: 1px; // Visual fix
 
           &:hover {
             color: $color-link-hover;

@@ -1,7 +1,9 @@
 When(/^I click to remove #{capture_model}$/) do |page|
   within '.page', text: model!(page).title do
-    find('.page-title').hover
-    handle_js_confirm { find('.remove-page-link').click }
+    page.should have_css '.remove-page-link'
+
+    find('.l-page-title').hover
+    handle_js_confirm { find('.remove-page-link', visible: false).click }
   end
 end
 

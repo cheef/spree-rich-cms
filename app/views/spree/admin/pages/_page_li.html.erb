@@ -1,16 +1,18 @@
 <li class="page">
-  <div class="alpha five columns page-slug">
+  <div class="alpha five columns l-page-slug">
     <%= link_to spree_page_path(page), target: '_blank' do %>
-      <%= spree_page_path(page) %><i class="icon-external-link"></i>
+      <i class="icon-external-link"></i>
+      <span class="b-page-slug"><%= spree_page_path(page) %></span>
     <% end %>
   </div>
-  <h3 class="seven columns page-title">
-    <%= link_to edit_admin_page_path(page.id), title: Spree.t('edit_page') do %>
-      <%= page.title %><i class="icon-edit"></i>
-    <% end %>
-
+  <h3 class="seven columns l-page-title">
     <%= link_to admin_page_path(page.id), method: :delete, title: Spree.t('remove_page'), class: 'remove-page-link', data: { confirm: Spree.t('removing_page_confirmation') } do %>
       <i class="icon-remove"></i>
+    <% end %>
+
+    <%= link_to edit_admin_page_path(page.id), title: Spree.t('edit_page') do %>
+      <i class="icon-edit"></i>
+      <span class="b-page-title"><%= page.title %></span>
     <% end %>
   </h3>
 </li>
