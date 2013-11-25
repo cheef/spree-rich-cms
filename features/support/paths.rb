@@ -11,6 +11,9 @@ module NavigationHelpers
     when /^the admin pages$/
       '/admin/pages'
 
+    when /^the edit admin #{capture_model}$/
+      "/admin/pages/#{model!($1).id}/edit"
+
     when /^the new admin page$/
       '/admin/pages/new'
 

@@ -26,9 +26,11 @@
     <%= f.error_message_on :meta_keywords %>
   <% end %>
 
-  <%= f.field_container :body do %>
-    <%= f.label :body, I18n.t(:body, scope: 'activerecord.attributes.spree/page') %>
-    <%= f.cktext_area :body %>
-    <%= f.error_message_on :body %>
-  <% end %>
+  <div data-hook="admin_page_form_body_field">
+    <%= f.field_container :body do %>
+      <%= f.label :body, I18n.t(:body, scope: 'activerecord.attributes.spree/page') %>
+      <%= f.cktext_area :body %>
+      <%= f.error_message_on :body %>
+    <% end %>
+  </div>
  </div>

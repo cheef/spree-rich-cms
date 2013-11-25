@@ -1,4 +1,4 @@
-Feature: as admin I have interface for adding pages
+Feature: as admin I want to see the list of existing pages
   Scenario: go to the pages list
     Given a user exists
     When I log in as the user

@@ -5,7 +5,7 @@ require 'simplecov'
 require File.expand_path("../../../spec/dummy/config/environment", __FILE__)
 require 'database_cleaner'
 require 'capybara/cucumber'
-require 'capybara-webkit'
+require 'capybara/poltergeist'
 require 'spree/testing_support/factories'
 require 'cucumber/rspec/doubles'
 require 'ffaker'
@@ -19,7 +19,7 @@ World(Capybara::DSL)
 DatabaseCleaner.strategy = :truncation
 
 Capybara.configure do |config|
-  config.javascript_driver = :webkit
+  config.javascript_driver = :poltergeist
 end
 
 Before do
